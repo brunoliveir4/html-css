@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(205, 255, 203);
+    font-family: sans-serif;
+}
+
+h1 {
+    color: rgb(16, 77, 14);
+}
+
+/*
+É possível tirar o "h1" e deixar sem 
+*/
+
+h1#principal{
+    text-align: center;
+    /*background-color: green;*/
+    color: white;
+}
+
+h2 {
+    color: rgb(28, 121, 33);
+}
+
+.basico {
+    color: rgb(235, 8, 197);
+    font-weight: bold;
+}
+
+.intermediario {
+    color: blue;
+}
+
+.avancado {
+    color: red;
+}
+
+.destaque {
+    background-color: rgba(150, 150, 84, 0.562);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+
+            /*
+            Medidas absolutas
+            cm, mm, in = polegada
+            px = recomendado para telas
+            pt = não recomendado para telas
+            pc = não recomendado para telas
+            16 px geralmente = 1em
+            
+            -- Medidas relativas --
+            em = relativo a altura da letra M
+            ex = relativo a altura x
+            rem = relativo a fonte que está no body
+            vw = largura da viewport
+            vh = altura da viewport
+            e a "%"
+            
+            weight = peso/ negrito ou não
+            width = largura
+            height = altura
+            font-size = tamanho geral da fonte(aumentada para todos os lados)
+
+            -- Tipos de negrito/ peso da fonte --
+            lighter 
+            normal
+            bold
+            bolder
+            
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: italic;
+            text-decoration: underline;
+            */
+
+        } 
+
+        h1 {
+                /*
+                font-family: sans serif;
+                font-weight: bolder;
+                font-size: 3em;
+                font-style: italic;
+
+                shorthand font
+                --> font-style --> font-weight --> font-size --> font-family
+                */
+
+                /*Forma simplificada abaixo*/
+                font: italic bolder 3em sans serif
+            }
+
+        h2 {
+            font: italic bolder 2em sans serif
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, delectus assumenda voluptatum voluptas libero maxime beatae totam architecto et obcaecati tempore cumque dolorem reiciendis! Enim minus tempora error maiores alias Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione. Ut ad totam doloremque sequi? Suscipit impedit quisquam dolore veritatis, quam est, ex labore aliquid officiis accusantium fugit perferendis dolores.</p>
+
+    <h2>Subtítulo do exercíio</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero blanditiis alias reiciendis laborum corporis! Veritatis deserunt commodi soluta optio obcaecati praesentium, delectus rem placeat, similique nostrum culpa enim unde sapiente.</p>
+</body>
+</html>

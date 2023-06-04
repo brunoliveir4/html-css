@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>IMAGEM DINÂMICA</h1>
+    <p>Teste abrir este site em vários dispositivos diferentes, ou sisplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+
+<!-- Colocando uma imagem flexível-->
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagem/fotop.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagem/fotom.png" type="image/png"> <!-- Se a imagem for menor que 1000px (tamanho no pc/ criado no gimp) irá ser carregada a imagem média -->
+        <!-- É possível inverter as fontes (os sources) começar do menor para o maior -->
+        <img src="imagem/fotog.png" alt="Imagem flexível">
+    </picture>
+
+<!-- Reproduzindo aúdios -->
+
+    <h1>Repoduzindo Áudios</h1>
+    <p>Vamos aprender a reproduzir Áudios em HTML5</p>
+    <!-- <audio src="midia/happymistake.mp3" controls></audio> -->
+    <!-- Formatos compatíveis: mp3, wav, ogg -->
+    <audio preload="metadata" controls loop>
+        <source src="midia/happymistake.mp3" controls type="audio/mpeg">
+        <source src="midia/happymistake.ogg" controls type="audio/ogg">
+        <source src="midia/happymistake.wav" controls type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir este áudio, <a href="midia/happymistake.mp3">lique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+
+</body>
+</html>
