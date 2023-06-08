@@ -27,7 +27,7 @@ p {
 
 header {
     background-color: black;
-    min-height: 220px;
+    min-height: 170px;
     text-align: center;
 }
 
@@ -112,7 +112,7 @@ footer {
 }
 
 footer > p {
-    font-size: 1em;
+    font-size: 14px;
     font-family: sans-serif;
     padding: 10px;
 }
