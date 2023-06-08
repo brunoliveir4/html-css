@@ -11,26 +11,26 @@
             padding: 0;
         }
 
-        .max-width {
-            background-image: url(imagens/espaco.jpg);
-            background-size: cover;
-            width: 100vw;
+        .container {
+            background-image: url('imagens/espaco.jpg');
             height: 100vh;
+            background-size: cover;
             background-position: center center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
         }
 
-        .max-width > img {
-            max-width: 100%;
-            height: auto;
+        .container > img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
         }
 
     </style>
 </head>
 <body>
-    <div class="max-width">
+    <div class="container">
         <img src="imagens/astronauta.png" alt="Imagem astronauta">
     </div>
 </body>
