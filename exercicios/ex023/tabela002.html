@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas grandes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 400px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: auto;
+            position: relative;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(80, 80, 80);;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: rgb(80, 80, 80);
+            height: 40px;
+            color: white;
+        }
+
+        tbody {
+            height: 40px;
+        }
+
+        /* odd ou - 2n-1 vão funcionar da msm forma */
+        /* tbody > tr:nth-child(2n-1) {
+            background-color: lightgray;
+        }  */
+
+        tbody tr:nth-child(odd) { 
+            background-color: white;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: lightgray;
+            /* text-decoration: underline; */
+        } 
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        
+        .num:nth-child(2) {
+            text-align: right;
+        }
+
+        th {
+            border: 1px solid black;
+        }
+
+        #cor {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Uso de tabelas grandes </h1>
+    
+    <!-- Anatomia de tabelas grandes
+
+        CAPTION = Legenda/título da tabela
+        THEAD
+            TR - TD - TH
+        TBODY
+            TR - TD - TH
+        TFOOT
+            TR - TD - TH
+    -->
+    <table>
+        <caption>POPULAÇÃO DAS UNIDADES FEDERATIVAS</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">41 262 199</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">19 597 330</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro</td>
+                <td class="num">15 989 929</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 016 906</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">10 444 526</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 693 929</td>
+            </tr>
+            <tr>
+                <td>Pernanbuco</td>
+                <td class="num">8 796 448</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8 452 381</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">7 581 051</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">6 248 436</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6 003 788</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td>6 574 789</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td>3 514 952</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td>3 766 528</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td>3 483 985</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td>3 483 985</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td>3 168 027</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td>3 118 360</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td>3 118 360</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td>2 570 160</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td>2 449 024</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td>2 068 017</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td>1 562 409</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td>1 562 409</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th scope="row">Total de habitantes</th>
+            <td id="cor"><strong>150.000.000 Mi</strong></td>
+        </tfoot>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fuga! Fugiat, minus. Alias reprehenderit voluptatibus, sed quos eum ducimus. Iusto quaerat dolores non excepturi optio fugiat iste ipsa amet asperiores corporis adipisci illum officiis laboriosam fugit rem explicabo a sunt quia est saepe, cum nisi! Modi, ab adipisci. Dolorem delectus dolor modi! Ipsam, quia at dicta blanditiis aspernatur sapiente inventore totam et praesentium minima, voluptate perspiciatis expedita! Quo pariatur, consequatur, earum, modi officiis culpa animi enim molestiae molestias repellendus asperiores dolores blanditiis rem vel sunt repellat! Eos alias animi maiores minima ipsum, quae, esse possimus veritatis explicabo magni ipsam iusto, error asperiores numquam officiis temporibus dolore? Nihil incidunt aliquid debitis fugit praesentium doloribus ipsam soluta, quas expedita quod temporibus, iure voluptatem necessitatibus deserunt tenetur vero, nostrum ducimus dolore alias molestias libero ut? Neque et porro nulla eos in a omnis nihil, hic praesentium officiis! Possimus perferendis ea aliquid blanditiis magnam eum error, aut omnis quod voluptatem exercitationem veniam id obcaecati quasi atque aperiam debitis accusantium! Suscipit quos aspernatur consequuntur atque nemo possimus, rem, voluptatibus totam quis temporibus dolorum inventore vitae voluptas error repellendus corrupti dolorem! Possimus quibusdam veniam vero doloribus ea maxime, natus voluptate illo inventore quos tenetur, aspernatur, maiores itaque ipsa. Optio id deserunt quibusdam accusantium dolorum atque odio commodi labore ullam! Rerum fugit, natus quam similique ex vel totam possimus molestiae? Laborum dolores similique, fugiat libero consequatur hic exercitationem nesciunt! Debitis magnam ratione in, minima molestias quam expedita harum error hic nesciunt enim dolores odit, esse nostrum quae nobis voluptatem est eligendi impedit. Sit aut quam velit enim, aspernatur provident cum repellat doloribus dignissimos culpa dolor harum qui doloremque quaerat, impedit neque deserunt officiis eius! Deserunt tempora, optio eum incidunt accusantium culpa quam sint quas similique ex ipsam itaque odit sed illum alias reiciendis amet, quod eveniet a.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fuga! Fugiat, minus. Alias reprehenderit voluptatibus, sed quos eum ducimus. Iusto quaerat dolores non excepturi optio fugiat iste ipsa amet asperiores corporis adipisci illum officiis laboriosam fugit rem explicabo a sunt quia est saepe, cum nisi! Modi, ab adipisci. Dolorem delectus dolor modi! Ipsam, quia at dicta blanditiis aspernatur sapiente inventore totam et praesentium minima, voluptate perspiciatis expedita! Quo pariatur, consequatur, earum, modi officiis culpa animi enim molestiae molestias repellendus asperiores dolores blanditiis rem vel sunt repellat! Eos alias animi maiores minima ipsum, quae, esse possimus veritatis explicabo magni ipsam iusto, error asperiores numquam officiis temporibus dolore? Nihil incidunt aliquid debitis fugit praesentium doloribus ipsam soluta, quas expedita quod temporibus, iure voluptatem necessitatibus deserunt tenetur vero, nostrum ducimus dolore alias molestias libero ut? Neque et porro nulla eos in a omnis nihil, hic praesentium officiis! Possimus perferendis ea aliquid blanditiis magnam eum error, aut omnis quod voluptatem exercitationem veniam id obcaecati quasi atque aperiam debitis accusantium! Suscipit quos aspernatur consequuntur atque nemo possimus, rem, voluptatibus totam quis temporibus dolorum inventore vitae voluptas error repellendus corrupti dolorem! Possimus quibusdam veniam vero doloribus ea maxime, natus voluptate illo inventore quos tenetur, aspernatur, maiores itaque ipsa. Optio id deserunt quibusdam accusantium dolorum atque odio commodi labore ullam! Rerum fugit, natus quam similique ex vel totam possimus molestiae? Laborum dolores similique, fugiat libero consequatur hic exercitationem nesciunt! Debitis magnam ratione in, minima molestias quam expedita harum error hic nesciunt enim dolores odit, esse nostrum quae nobis voluptatem est eligendi impedit. Sit aut quam velit enim, aspernatur provident cum repellat doloribus dignissimos culpa dolor harum qui doloremque quaerat, impedit neque deserunt officiis eius! Deserunt tempora, optio eum incidunt accusantium culpa quam sint quas similique ex ipsam itaque odit sed illum alias reiciendis amet, quod eveniet a.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fuga! Fugiat, minus. Alias reprehenderit voluptatibus, sed quos eum ducimus. Iusto quaerat dolores non excepturi optio fugiat iste ipsa amet asperiores corporis adipisci illum officiis laboriosam fugit rem explicabo a sunt quia est saepe, cum nisi! Modi, ab adipisci. Dolorem delectus dolor modi! Ipsam, quia at dicta blanditiis aspernatur sapiente inventore totam et praesentium minima, voluptate perspiciatis expedita! Quo pariatur, consequatur, earum, modi officiis culpa animi enim molestiae molestias repellendus asperiores dolores blanditiis rem vel sunt repellat! Eos alias animi maiores minima ipsum, quae, esse possimus veritatis explicabo magni ipsam iusto, error asperiores numquam officiis temporibus dolore? Nihil incidunt aliquid debitis fugit praesentium doloribus ipsam soluta, quas expedita quod temporibus, iure voluptatem necessitatibus deserunt tenetur vero, nostrum ducimus dolore alias molestias libero ut? Neque et porro nulla eos in a omnis nihil, hic praesentium officiis! Possimus perferendis ea aliquid blanditiis magnam eum error, aut omnis quod voluptatem exercitationem veniam id obcaecati quasi atque aperiam debitis accusantium! Suscipit quos aspernatur consequuntur atque nemo possimus, rem, voluptatibus totam quis temporibus dolorum inventore vitae voluptas error repellendus corrupti dolorem! Possimus quibusdam veniam vero doloribus ea maxime, natus voluptate illo inventore quos tenetur, aspernatur, maiores itaque ipsa. Optio id deserunt quibusdam accusantium dolorum atque odio commodi labore ullam! Rerum fugit, natus quam similique ex vel totam possimus molestiae? Laborum dolores similique, fugiat libero consequatur hic exercitationem nesciunt! Debitis magnam ratione in, minima molestias quam expedita harum error hic nesciunt enim dolores odit, esse nostrum quae nobis voluptatem est eligendi impedit. Sit aut quam velit enim, aspernatur provident cum repellat doloribus dignissimos culpa dolor harum qui doloremque quaerat, impedit neque deserunt officiis eius! Deserunt tempora, optio eum incidunt accusantium culpa quam sint quas similique ex ipsam itaque odit sed illum alias reiciendis amet, quod eveniet a.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fuga! Fugiat, minus. Alias reprehenderit voluptatibus, sed quos eum ducimus. Iusto quaerat dolores non excepturi optio fugiat iste ipsa amet asperiores corporis adipisci illum officiis laboriosam fugit rem explicabo a sunt quia est saepe, cum nisi! Modi, ab adipisci. Dolorem delectus dolor modi! Ipsam, quia at dicta blanditiis aspernatur sapiente inventore totam et praesentium minima, voluptate perspiciatis expedita! Quo pariatur, consequatur, earum, modi officiis culpa animi enim molestiae molestias repellendus asperiores dolores blanditiis rem vel sunt repellat! Eos alias animi maiores minima ipsum, quae, esse possimus veritatis explicabo magni ipsam iusto, error asperiores numquam officiis temporibus dolore? Nihil incidunt aliquid debitis fugit praesentium doloribus ipsam soluta, quas expedita quod temporibus, iure voluptatem necessitatibus deserunt tenetur vero, nostrum ducimus dolore alias molestias libero ut? Neque et porro nulla eos in a omnis nihil, hic praesentium officiis! Possimus perferendis ea aliquid blanditiis magnam eum error, aut omnis quod voluptatem exercitationem veniam id obcaecati quasi atque aperiam debitis accusantium! Suscipit quos aspernatur consequuntur atque nemo possimus, rem, voluptatibus totam quis temporibus dolorum inventore vitae voluptas error repellendus corrupti dolorem! Possimus quibusdam veniam vero doloribus ea maxime, natus voluptate illo inventore quos tenetur, aspernatur, maiores itaque ipsa. Optio id deserunt quibusdam accusantium dolorum atque odio commodi labore ullam! Rerum fugit, natus quam similique ex vel totam possimus molestiae? Laborum dolores similique, fugiat libero consequatur hic exercitationem nesciunt! Debitis magnam ratione in, minima molestias quam expedita harum error hic nesciunt enim dolores odit, esse nostrum quae nobis voluptatem est eligendi impedit. Sit aut quam velit enim, aspernatur provident cum repellat doloribus dignissimos culpa dolor harum qui doloremque quaerat, impedit neque deserunt officiis eius! Deserunt tempora, optio eum incidunt accusantium culpa quam sint quas similique ex ipsam itaque odit sed illum alias reiciendis amet, quod eveniet a.</p>
+</body>
+</html>
