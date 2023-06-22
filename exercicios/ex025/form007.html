@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="" method="get" autocomplete="on">
+        <legend>Formulário</legend>
+        <p>
+            <label for="iest">Estado: </label>
+            <select name="estado" id="iest" required>
+
+                <option value="" selected disabled>--- Escolha ---</option>
+                <optgroup label="Região sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+
+                <optgroup label="Região norte">
+                    <option value="PE">Pernanbuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="MA">Maranhão</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Enviar dados">
+            <input type="reset" value="Lipar dados">
+        </p>
+    </form>
+</body>
+</html>
