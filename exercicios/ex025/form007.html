@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <style>
+        body {
+            background-color: rgb(35, 104, 104);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>Exemplo de formulário</h1>
-    <form action="" method="get" autocomplete="on">
+    <form action="cadastro.php" method="get" autocomplete="on">
         <legend>Formulário</legend>
         <p>
             <label for="iest">Estado: </label>
@@ -27,6 +33,24 @@
                 </optgroup>
             </select>
         </p>
+
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <!-- Dentro do value vai o valor enviado pela escolha -->
+                <option value="DEV">Desenvolvedor</option>
+                <option value="CON">Contabilista</option>
+                <option value="MAR">Marceneiro</option>
+                <option value="MOTO">Motorista</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem: </label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p>
+
         <p>
             <input type="submit" value="Enviar dados">
             <input type="reset" value="Lipar dados">
